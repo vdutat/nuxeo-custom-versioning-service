@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<component name="org.nuxeo.versioning.versioningService.custom.automation.AutomationVersioningService" version="1.0" >
+
+<extension target="org.nuxeo.ecm.core.versioning.VersioningService" point="versioningService">
+	<service class="org.nuxeo.ecm.core.versioning.ConfigVersioningService"/>
+</extension>
+
+</component>
