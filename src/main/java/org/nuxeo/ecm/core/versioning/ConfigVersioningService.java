@@ -7,7 +7,6 @@ import org.nuxeo.ecm.core.api.VersioningOption;
 import org.nuxeo.ecm.core.lifecycle.LifeCycleException;
 import org.nuxeo.ecm.core.model.Document;
 import org.nuxeo.runtime.api.Framework;
-//import org.nuxeo.runtime.services.config.ConfigurationService;
 
 public class ConfigVersioningService extends StandardVersioningService implements VersioningService {
 	
@@ -38,10 +37,5 @@ public class ConfigVersioningService extends StandardVersioningService implement
 	protected String getTransition(String lifecyclePolicy, String lifecycleState) {
         return Framework.getProperty(String.format(AUTOMATION_CHAIN_PROP_PATTERN, lifecyclePolicy, lifecycleState));
 	}
-
-//	protected String getTransition(String lifecyclePolicy, String lifecycleState) {
-//        ConfigurationService cs = Framework.getService(ConfigurationService.class);
-//        return cs.getProperty(String.format(AUTOMATION_CHAIN_PROP_PATTERN, lifecyclePolicy, lifecycleState));
-//	}
 
 }
