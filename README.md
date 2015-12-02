@@ -22,8 +22,10 @@ This module is **not** supported by Nuxeo.
  
 # Building
  
-        mvn clean install
-  
+```
+mvn clean install
+```
+
 ## QA
   
 None.
