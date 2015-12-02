@@ -14,7 +14,7 @@ i.e. a document of type `docType1` with a lifecycle policy `lcPolicy1` must foll
 nuxeo.versioning.versioningservice.lcPolicy1.from.validated.followTransition=backToDraft
 ```
 
-If you don't define any configuration parameter in `nuxeo.conf`, the standard behaviour (following the transition `backToProject`) is disabled.
+If you don't define any configuration parameter in `nuxeo.conf`, the standard behaviour (following the transition `backToProject`) is enabled *only* for documents with lifecyle policy `default`, no change of lifecyle state will be done on documents having any other lifecycle policy.
 
 This module is **not** supported by Nuxeo.
 
