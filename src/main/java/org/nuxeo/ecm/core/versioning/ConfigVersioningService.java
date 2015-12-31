@@ -38,4 +38,18 @@ public class ConfigVersioningService extends StandardVersioningService implement
         return Framework.getProperty(String.format(AUTOMATION_CHAIN_PROP_PATTERN, lifecyclePolicy, lifecycleState));
 	}
 
+    @Override
+    public void doCheckOut(Document doc) throws DocumentException {
+        Document last = doc.getLastVersion();
+        long major = 0;
+        long minor = 0;
+        if (last != null) {
+            major = getMajor(last);
+            minor = getMinor(last);
+        }
+        LOGGER.debug("major version:" + getMajor(doc) + "-->" + major);
+        LOGGER.debug("minor version:" + getMinor(doc) + "-->" + minor);
+        super.doCheckOut(doc);
+    }
+
 }
